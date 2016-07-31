@@ -45,6 +45,7 @@ if __name__ == '__main__':
             'base': 'ubuntu14_py35',
             'cuda': 'cuda75',
             'cudnn': 'cudnn5',
+            'protobuf-cpp': 'protobuf-cpp-3',
             'requires': ['setuptools', 'cython', 'numpy<1.10', 'h5py'],
         }
         script = './test.sh'

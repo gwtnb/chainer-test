@@ -13,7 +13,7 @@ params = {
     'cuda': docker.cuda_choices,
     'cudnn': docker.cudnn_choices,
     'numpy': ['1.9', '1.10', '1.11'],
-    'protobuf': ['2', '3'],
+    'protobuf': ['2', '3', 'cpp-3'],
     'h5py': ['none', '2.5', '2.6'],
 }
 
@@ -73,6 +73,8 @@ if __name__ == '__main__':
         conf['requires'].append('protobuf==3.0.0b2.post2')
     elif params['protobuf'] == '2':
         conf['requires'].append('protobuf<3')
+    elif args.protobuf == 'cpp-3':
+        conf['protobuf-cpp'] = 'protobuf-cpp-3'
 
     if params['h5py'] == '2.6':
         conf['requires'].append('h5py<2.7')
