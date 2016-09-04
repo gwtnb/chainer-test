@@ -9,7 +9,8 @@ cd dist
 pip install *.tar.gz --user
 cd ..
 
-pip install coverage pillow --user
+pip install pillow --user --global-option=build_ext --global-option="--disable-jpeg"
+pip install coverage --user
 
 run="coverage run -a --branch"
 

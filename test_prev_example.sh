@@ -17,7 +17,8 @@ else
   echo "both apt-get and yum command are not found"
   exit 1
 fi
-pip install h5py pillow --user
+pip install h5py --user
+pip install pillow --user --global-option=build_ext --global-option="--disable-jpeg"
 
 run=python
 
